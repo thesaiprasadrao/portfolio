@@ -1,6 +1,11 @@
 .pill-nav-container {
-  position: absolute;
-  top: 1em;
+  position: fixed;
+  top: 1rem;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   z-index: 99;
 }
 
@@ -134,16 +139,8 @@
 }
 
 .pill.is-active::after {
-  content: '';
-  position: absolute;
-  bottom: -6px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 12px;
-  height: 12px;
-  background: var(--base, #000);
-  border-radius: 50px;
-  z-index: 4;
+  /* Disabled to avoid the visible notch at the bottom of the pill */
+  content: none;
 }
 
 .desktop-only {
