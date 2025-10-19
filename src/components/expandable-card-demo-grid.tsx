@@ -210,37 +210,30 @@ const cards = [
     content: () => {
       return (
         <p>
-          BlueMesh is a revolutionary P2P chat application that leverages Bluetooth technology to enable seamless communication between devices. With its user-friendly interface and robust features, BlueMesh allows users to connect and chat without the need for an internet connection. <br /> <br /> The app is designed to work in various environments, making it ideal for outdoor activities, travel, and situations where traditional network connectivity is unavailable. Users can create temporary chat rooms, share files, and enjoy real-time messaging with minimal latency.
-          her melancholic and cinematic music style. Born Elizabeth Woolridge
-          Grant in New York City, she has captivated audiences worldwide with
-          her haunting voice and introspective lyrics. <br /> <br /> Her songs
-          often explore themes of tragic romance, glamour, and melancholia,
-          drawing inspiration from both contemporary and vintage pop culture.
-          With a career that has seen numerous critically acclaimed albums, Lana
-          Del Rey has established herself as a unique and influential figure in
-          the music industry, earning a dedicated fan base and numerous
-          accolades.
+
+          BlueMesh - Bluetooth-based Peer-to-Peer Messaging App | Node.js, Web Bluetooth API, LocalStorage
+          • Built a browser-based chat app that connects devices directly over Bluetooth, eliminating the need for
+          internet or mobile data.
+          • Implemented multi-hop message relaying, allowing messages to travel across intermediate devices and
+          effectively extending range.
+          • Designed the system to be offline-first, ensuring 100% local storage of messages and files with automatic
+          reconnection after disconnections.
+          • Packaged and tested the app on Android using Node.js + Termux, enabling deployment without external
+          servers or infrastructure.
         </p>
       );
     },
   },
   {
-    description: "Babbu Maan",
-    title: "Mitran Di Chhatri",
-    src: "https://assets.aceternity.com/demos/babbu-maan.jpeg",
+    description: "An End to End Fleet Management System",
+    title: "Safar Saathi",
+    src: "https://github.com/thesaiprasadrao/safar-saathi",
     ctaText: "Visit",
-    ctaLink: "https://ui.aceternity.com/templates",
+    ctaLink: "https://github.com/thesaiprasadrao/safar-saathi",
     content: () => {
       return (
         <p>
-          Babu Maan, a legendary Punjabi singer, is renowned for his soulful
-          voice and profound lyrics that resonate deeply with his audience. Born
-          in the village of Khant Maanpur in Punjab, India, he has become a
-          cultural icon in the Punjabi music industry. <br /> <br /> His songs
-          often reflect the struggles and triumphs of everyday life, capturing
-          the essence of Punjabi culture and traditions. With a career spanning
-          over two decades, Babu Maan has released numerous hit albums and
-          singles that have garnered him a massive fan following both in India
+          A full-stack, multi-panel system for real-time bus tracking with dedicated Admin, User, and Driver applications. This monorepo contains multiple backends and frontends built with modern web technologies.
           and abroad.
         </p>
       );
@@ -248,47 +241,48 @@ const cards = [
   },
 
   {
-    description: "Metallica",
-    title: "For Whom The Bell Tolls",
-    src: "https://assets.aceternity.com/demos/metallica.jpeg",
+    description: "A Jee Main College Predictor ",
+    title: "Jee Main College Predictor",
+    src: "#",
     ctaText: "Visit",
-    ctaLink: "https://ui.aceternity.com/templates",
+    ctaLink: "https://github.com/thesaiprasadrao/jee-main-college-predictor",
     content: () => {
       return (
         <p>
-          Metallica, an iconic American heavy metal band, is renowned for their
-          powerful sound and intense performances that resonate deeply with
-          their audience. Formed in Los Angeles, California, they have become a
-          cultural icon in the heavy metal music industry. <br /> <br /> Their
-          songs often reflect themes of aggression, social issues, and personal
-          struggles, capturing the essence of the heavy metal genre. With a
-          career spanning over four decades, Metallica has released numerous hit
-          albums and singles that have garnered them a massive fan following
-          both in the United States and abroad.
+          A simple CLI tool to predict college admissions based on historical data and machine learning.
         </p>
       );
     },
   },
   {
-    description: "Lord Himesh",
-    title: "Aap Ka Suroor",
-    src: "https://assets.aceternity.com/demos/aap-ka-suroor.jpeg",
+    description: "Real-Time Voting Platform",
+    title: "OneVote",
+    src: "#",
     ctaText: "Visit",
-    ctaLink: "https://ui.aceternity.com/templates",
+    ctaLink: "https://github.com/thesaiprasadrao/one-vote",
     content: () => {
       return (
         <p>
-          Himesh Reshammiya, a renowned Indian music composer, singer, and
-          actor, is celebrated for his distinctive voice and innovative
-          compositions. Born in Mumbai, India, he has become a prominent figure
-          in the Bollywood music industry. <br /> <br /> His songs often feature
-          a blend of contemporary and traditional Indian music, capturing the
-          essence of modern Bollywood soundtracks. With a career spanning over
-          two decades, Himesh Reshammiya has released numerous hit albums and
-          singles that have garnered him a massive fan following both in India
-          and abroad.
+          OneVote is a real-time voting platform that allows users to create,
+          manage, and participate in polls and surveys. Built with modern web
+          technologies, it provides a seamless user experience and robust
+          features for both administrators and participants.
         </p>
       );
     },
   },
+  {
+    description: "Privacy-First Journal App",
+    title: "Mood Diary",
+    src: "/public/mood-diary.png",
+    ctaText: "Visit",
+    ctaLink: "https://github.com/thesaiprasadrao/mood-diary",
+    content: () => {
+      return (
+        <p>
+          Lightweight, client‑side mood & journaling tracker. Pick a mood, jot a note, and watch simple stats build over time — all stored privately in your own browser (localStorage). No backend, no signup.
+        </p>
+      );
+    },
+  }
 ];
