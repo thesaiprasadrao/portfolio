@@ -3,11 +3,11 @@ import PillNav from './PillNav';
 
 export default function PillNavWrapper() {
 	const items = [
-		{ label: 'Home', href: '/' },
-		{ label: 'Projects', href: '#projects' },
-		{ label: 'About', href: '#about' },
-		{ label: 'Contact', href: '#contact' },
-	];
+			{ label: 'Home', href: '/' },
+			{ label: 'Projects', href: '/projects' },
+			{ label: 'About', href: '/about' },
+			{ label: 'Contact', href: '/contact' },
+		];
 
 	return (
 			<PillNav
