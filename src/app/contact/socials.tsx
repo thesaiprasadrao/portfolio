@@ -3,6 +3,7 @@ import * as React from "react"
 import { InstagramButton } from "@/components/insta-button"
 import { LinkedInButton } from "@/components/linkedin-button"
 import { EmailButton } from "@/components/email-button"
+import { PhoneButton } from "@/components/phone-button"
 export const SocialSection: React.FC = () => {
   return (
     <section
@@ -13,14 +14,17 @@ export const SocialSection: React.FC = () => {
         </h2>
       <div className="flex gap-6 sm:gap-8">
         <div className="flex flex-col items-center gap-2">
-          <InstagramButton onClick={() => window.open("https://www.instagram.com/thesaiprasadrao/", "_blank")} />
-        
+            <EmailButton onClick={() => window.location.href = "mailto:saiprasadrao@gmail.com"} />  
         </div>
         <div className="flex flex-col items-center gap-2">
           <LinkedInButton onClick={() => window.open("https://www.linkedin.com/company/saiprasadrao", "_blank")} />
         </div>
         <div className="flex flex-col items-center gap-2">
-            <EmailButton onClick={() => window.location.href = "mailto:saiprasadrao@gmail.com"} />  
+          <PhoneButton onClick={() => window.open("tel:+919902450514", "_blank")} />
+        </div>
+        <div className="flex flex-col items-center gap-2">
+          <InstagramButton onClick={() => window.open("https://www.instagram.com/thesaiprasadrao/", "_blank")} />
+        
         </div>
     
       </div>

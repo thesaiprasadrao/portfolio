@@ -1,5 +1,6 @@
 import LightRays from "@/components/LightRays";
-
+import DownloadCVButton from "@/components/DownloadCVButton";
+import ContactButton from "@/components/ContactButton";
 export default function Home() {
   return (
     <div className="background-black">
@@ -21,6 +22,13 @@ export default function Home() {
           <div className="flex flex-col items-center text-center gap-3">
             <p className="text-white text-2xl">Hey there 👋 , welcome to my portfolio.</p>
             <p className="text-white text-4xl">I am <span className="font-bold">Saiprasad Rao</span>, a web developer.</p>
+            <div className="flex flex-row items-center gap-4">
+              <DownloadCVButton />
+              <div className="pb-1.1">
+                <ContactButton />
+              </div>
+              
+            </div>
           </div>
         </div>
       </div>

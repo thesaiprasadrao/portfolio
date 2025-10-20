@@ -1,4 +1,6 @@
 "use client";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 import PillNav from './PillNav';
 
 export default function PillNavWrapper() {
@@ -9,11 +11,18 @@ export default function PillNavWrapper() {
 			{ label: 'Contact', href: '/contact' },
 		];
 
+	const pathname = usePathname();
+	const [activeHref, setActiveHref] = useState(pathname);
+
+	useEffect(() => {
+		setActiveHref(pathname);
+	}, [pathname]);
+
 	return (
 			<PillNav
 			// logo="/file.svg"
 			items={items}
-			activeHref={typeof window !== 'undefined' ? window.location.pathname : '/'}
+			activeHref={activeHref}
 			baseColor="#ffffff"
 			pillColor="#000000"
 			hoveredPillTextColor="#000000"

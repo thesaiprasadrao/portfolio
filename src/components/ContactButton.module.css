@@ -1,0 +1,30 @@
+.contactBtn {
+  padding: 8px 24px 7px;
+  border: 2px solid #fcfcfc;
+  border-radius: 50px;
+  background-color: #000000;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.contactBtn:hover {
+  background-color: #707375;
+  color: #4e484a;
+  box-shadow: 0 0 20px #ffffff50;
+  transform: scale(1.1);
+}
+
+.contactBtn:active {
+  background-color: #3d94cf;
+  transition: all 0.25s;
+  -webkit-transition: all 0.25s;
+  box-shadow: none;
+  transform: scale(0.98);
+}
