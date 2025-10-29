@@ -2,7 +2,7 @@ import { FaUserCircle } from "react-icons/fa";
 
 export default function AboutPage() {
   return (
-    <div className="background-black min-h-screen flex flex-col items-center justify-center px-4 sm:px-8">
+    <div className="background-black min-h-screen flex flex-col items-center justify-center px-40 sm:px-8">
       {/* Profile Image & Header */}
       <div className="flex flex-col items-center mb-6">
         {/* <FaUserCircle className="text-white text-6xl mb-2" /> */}
