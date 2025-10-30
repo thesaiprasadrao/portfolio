@@ -6,7 +6,7 @@ export default function AboutPage() {
       {/* Profile Image & Header */}
       <div className="flex flex-col items-center mb-6">
         {/* <FaUserCircle className="text-white text-6xl mb-2" /> */}
-        <h1 className="text-white text-4xl sm:text-5xl font-bold mb-2 text-center relative">
+        <h1 className="text-white text-4xl sm:text-5xl font-bold mb-2 mt-7 text-center relative">
           About
           <span className="block h-1 w-24 mx-auto mt-2 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full opacity-60" />
         </h1>
