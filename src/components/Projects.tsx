@@ -5,25 +5,40 @@ import { ExternalLink, Github } from "lucide-react";
 const Projects = () => {
   const projects = [
     {
-      title: "E-Commerce Platform",
+      title: "BruteForce 2025 Hackathon Landing Page",
       description:
-        "Full-stack e-commerce solution with payment integration, inventory management, and admin dashboard.",
-      tech: ["React", "Node.js", "PostgreSQL", "Stripe"],
+        "Built a responsive event site with complex 3D visual effects using Three.js. Implemented animated terminal component for user onboarding and fluid UX with locomotive.js.",
+      tech: ["Next.js", "React", "TypeScript", "Three.js"],
       image: "gradient-primary",
+      link: "https://bruteforcecsbs.dev",
+      github: "#",
     },
     {
-      title: "Task Management App",
+      title: "Safar Saathi - Fleet Tracking Platform",
       description:
-        "Collaborative project management tool with real-time updates, team collaboration, and analytics.",
-      tech: ["Next.js", "TypeScript", "MongoDB", "Socket.io"],
+        "Complete backend system with live tracking sending location updates every 3 seconds. Supports Admin, User, and Driver roles with Fastify and TypeScript.",
+      tech: ["Node.js", "Supabase", "Fastify", "TypeScript"],
       image: "gradient-accent",
+      link: "#",
+      github: "#",
     },
     {
-      title: "AI Content Generator",
+      title: "ScamShield - AI-Powered Scam Analyzer",
       description:
-        "AI-powered content creation platform leveraging GPT models for automated content generation.",
-      tech: ["React", "Python", "OpenAI", "AWS"],
+        "Full-stack scam detection app with OCR support using Pytesseract. Features NextAuth authentication, protected routes, and RESTful API for text and image analysis.",
+      tech: ["Next.js", "TypeScript", "FastAPI", "Python"],
       image: "gradient-primary",
+      link: "#",
+      github: "#",
+    },
+    {
+      title: "JEE Main College Predictor",
+      description:
+        "CLI tool to predict college admissions (NIT, IIIT, GFTI) based on rank, trained over 2 lakh+ cutoff records from 2020-2025 using machine learning.",
+      tech: ["Python", "Machine Learning", "Data Processing"],
+      image: "gradient-accent",
+      link: "#",
+      github: "#",
     },
   ];
 
@@ -39,7 +54,7 @@ const Projects = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <Card
               key={index}
@@ -55,8 +70,8 @@ const Projects = () => {
               </div>
 
               <div className="p-6 space-y-4">
-                <h3 className="text-2xl font-bold text-foreground">{project.title}</h3>
-                <p className="text-muted-foreground">{project.description}</p>
+                <h3 className="text-xl font-bold text-foreground leading-tight">{project.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{project.description}</p>
 
                 <div className="flex flex-wrap gap-2">
                   {project.tech.map((tech, i) => (
@@ -70,11 +85,20 @@ const Projects = () => {
                 </div>
 
                 <div className="flex gap-3 pt-2">
-                  <Button variant="outline" size="sm" className="flex-1 group/btn">
+                  <Button 
+                    variant="outline" 
+                    size="sm" 
+                    className="flex-1 group/btn"
+                    onClick={() => window.open(project.github, '_blank')}
+                  >
                     <Github className="h-4 w-4 mr-2 group-hover/btn:rotate-12 transition-transform" />
                     Code
                   </Button>
-                  <Button size="sm" className="flex-1 group/btn bg-gradient-primary">
+                  <Button 
+                    size="sm" 
+                    className="flex-1 group/btn bg-gradient-primary"
+                    onClick={() => window.open(project.link, '_blank')}
+                  >
                     <ExternalLink className="h-4 w-4 mr-2 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
                     Live
                   </Button>
