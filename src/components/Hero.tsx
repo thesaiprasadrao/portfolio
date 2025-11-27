@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowRight, Github, Linkedin, Mail , Phone} from "lucide-react";
 
-const Hero = () => {
+const Contact = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 overflow-hidden">
       {/* Animated Background Elements */}
@@ -50,6 +50,18 @@ const Hero = () => {
 
         <div className="flex items-center justify-center gap-4 pt-8">
           <a
+            href="mailto:saiprasadrao1234.com"
+            className="p-3 rounded-full bg-card hover:bg-primary hover:text-primary-foreground transition-all hover:scale-110 border border-border"
+          >
+            <Mail className="h-5 w-5" />
+          </a>
+          <a
+            href="tel:+919902450514"
+            className="p-3 rounded-full bg-card hover:bg-primary hover:text-primary-foreground transition-all hover:scale-110 border border-border"
+          >
+            <Phone className="h-5 w-5" />
+          </a>
+          <a
             href="https://github.com/thesaiprasadrao"
             target="_blank"
             rel="noopener noreferrer"
@@ -65,16 +77,11 @@ const Hero = () => {
           >
             <Linkedin className="h-5 w-5" />
           </a>
-          <a
-            href="mailto:saiprasadrao1234.com"
-            className="p-3 rounded-full bg-card hover:bg-accent hover:text-accent-foreground transition-all hover:scale-110 border border-border"
-          >
-            <Mail className="h-5 w-5" />
-          </a>
+          
         </div>
       </div>
     </section>
   );
 };
 
-export default Hero;
+export default Contact;
