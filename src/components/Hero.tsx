@@ -30,7 +30,7 @@ const Hero = () => {
         </h1>
 
         <p className="text-xl sm:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-          Full-Stack Developer & Creative Problem Solver
+          Full-Stack Web Developer
         </p>
 
         <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -50,7 +50,7 @@ const Hero = () => {
 
         <div className="flex items-center justify-center gap-4 pt-8">
           <a
-            href="https://github.com"
+            href="https://github.com/thesaiprasadrao"
             target="_blank"
             rel="noopener noreferrer"
             className="p-3 rounded-full bg-card hover:bg-primary hover:text-primary-foreground transition-all hover:scale-110 border border-border"
@@ -66,18 +66,11 @@ const Hero = () => {
             <Linkedin className="h-5 w-5" />
           </a>
           <a
-            href="mailto:contact@example.com"
+            href="mailto:saiprasadrao1234.com"
             className="p-3 rounded-full bg-card hover:bg-accent hover:text-accent-foreground transition-all hover:scale-110 border border-border"
           >
             <Mail className="h-5 w-5" />
           </a>
-        </div>
-      </div>
-
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-primary/30 rounded-full p-1">
-          <div className="w-1.5 h-3 bg-primary rounded-full mx-auto animate-pulse" />
         </div>
       </div>
     </section>
