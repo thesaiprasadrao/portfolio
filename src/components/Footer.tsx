@@ -10,7 +10,7 @@ const Footer = () => {
               Saiprasad Rao
             </h3>
             <p className="text-sm text-muted-foreground">
-              Full-Stack Developer crafting beautiful digital experiences
+              Full-Stack Web Developer
             </p>
           </div>
 
@@ -60,7 +60,7 @@ const Footer = () => {
                 <Twitter className="h-5 w-5" />
               </a>
               <a
-                href="mailto:contact@example.com"
+                href="mailto:saiprasadrao1234@gmail.com"
                 className="p-2 rounded-lg bg-card hover:bg-accent hover:text-accent-foreground transition-all border border-border"
               >
                 <Mail className="h-5 w-5" />
