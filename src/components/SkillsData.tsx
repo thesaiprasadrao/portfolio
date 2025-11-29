@@ -53,16 +53,14 @@ export const skillsData: SkillCategory[] = [
     title: "Backend",
     skills: [
       { name: "Node.js", icon: FaNodeJs, color: "#339933" },
+      { name: "Flask", icon: FaFlask, color: "#000000" },
+      { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
       { name: "PostgreSQL", icon: SiPostgresql, color: "#4169E1" },
-      { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
-      { name: "GraphQL", icon: SiGraphql, color: "#E10098" },
       { name: "REST APIs", icon: FaServer, color: "#000000" },
-    { name: "PostgreSQL", icon: SiPostgresql, color: "#4169E1" },
-      { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
     ],
   },
   {
-    title: "Tools & Cloud",
+    title: "Tools",
     skills: [
       { name: "Git", icon: FaGitAlt, color: "#F05032" },
       { name: "Docker", icon: FaDocker, color: "#1c8fe7ff" },

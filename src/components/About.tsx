@@ -33,9 +33,9 @@ const About = () => {
             <div className="aspect-square rounded-2xl bg-gradient-primary p-1">
               <div className="w-full h-full rounded-xl bg-card flex items-center justify-center">
                 <div className="text-center space-y-4">
-                  <div className="text-6xl font-bold text-primary">5+</div>
+                  {/* <div className="text-6xl font-bold text-primary">5+</div>
                   <div className="text-xl font-medium text-foreground">Years Experience</div>
-                  <div className="text-sm text-muted-foreground">Building Digital Products</div>
+                  <div className="text-sm text-muted-foreground">Building Digital Products</div> */}
                 </div>
               </div>
             </div>

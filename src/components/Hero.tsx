@@ -1,7 +1,24 @@
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Github, Linkedin, Mail , Phone} from "lucide-react";
 
-const Contact = () => {
+const Hero = () => {
+  const [text, setText] = useState("");
+  const fullText = "Full-Stack Web Developer";
+
+  useEffect(() => {
+    let index = 0;
+    const timer = setInterval(() => {
+      setText(fullText.slice(0, index));
+      index++;
+      if (index > fullText.length) {
+        clearInterval(timer);
+      }
+    }, 100);
+
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 overflow-hidden">
       {/* Animated Background Elements */}
@@ -24,13 +41,14 @@ const Contact = () => {
 
         <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight">
           <span className="block text-foreground">Hi, I'm</span>
-          <span className="block bg-gradient-primary bg-clip-text text-transparent mt-2">
+          <span className="block bg-gradient-primary bg-clip-text text-transparent mt-2 animate-blur-in">
             Saiprasad Rao
           </span>
         </h1>
 
-        <p className="text-xl sm:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-          Full-Stack Web Developer
+        <p className="text-xl sm:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed min-h-[2rem]">
+          {text}
+          <span className="animate-pulse">|</span>
         </p>
 
         <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -39,13 +57,17 @@ const Contact = () => {
         </p>
 
         <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
+          <a href="#projects">
           <Button size="lg" className="group bg-gradient-primary hover:shadow-xl hover:shadow-primary/20 transition-all">
             View My Work
             <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
           </Button>
+          </a>
+          <a href="/#contact">
           <Button size="lg" variant="outline" className="border-2">
             Contact Me
           </Button>
+          </a>
         </div>
 
         <div className="flex items-center justify-center gap-4 pt-8">
@@ -84,4 +106,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default Hero;

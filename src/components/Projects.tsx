@@ -21,7 +21,7 @@ const Projects = () => {
       tech: ["Node.js", "Supabase", "Fastify", "TypeScript"],
       image: "public/projects/SafarSaathi.png",
       gradient: "gradient-accent",
-      link: "#",
+      link: "about:blank",
       github: "https://github.com/thesaiprasadrao/safar-saathi",
     },
     {
@@ -29,7 +29,7 @@ const Projects = () => {
       description:
         "Full-stack scam detection app with OCR support using Pytesseract. Features NextAuth authentication, protected routes, and RESTful API for text and image analysis.",
       tech: ["Next.js", "TypeScript", "FastAPI", "Python"],
-      image: "public/projects/ScamSheil.png",
+      image: "public/projects/ScamShield.png",
       gradient: "gradient-primary",
       link: "#",
       github: "https://github.com/thesaiprasadrao/scam-sheild-analyzer",
