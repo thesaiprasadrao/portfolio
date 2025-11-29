@@ -46,9 +46,9 @@ const contactLinks = [
 
 // Modular styling configuration
 const STYLE_CONFIG = {
-  iconSize: "w-1 h-1 md:w-10 md:h-10",
-  containerPadding: "p-4",
-  gap: "gap-6 md:gap-12"
+  iconSize: "w-5 h-5 md:w-6 md:h-6",
+  containerPadding: "p-3",
+  gap: "gap-4 md:gap-8"
 };
 
 const Contact = () => {
