@@ -57,13 +57,13 @@ const Hero = () => {
         </p>
 
         <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
-          <a href="#projects">
+          <a href="projects">
           <Button size="lg" className="group bg-gradient-primary hover:shadow-xl hover:shadow-primary/20 transition-all">
             View My Work
             <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
           </Button>
           </a>
-          <a href="/#contact">
+          <a href="contact">
           <Button size="lg" variant="outline" className="border-2">
             Contact Me
           </Button>

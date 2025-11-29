@@ -1,7 +1,9 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github } from "lucide-react";
-
+import bruteForceImg from "@/assets/projects/BruteForce.png";
+import scamShieldImg from "@/assets/projects/ScamShield.png";
+import safarSaathiImg from "@/assets/projects/SafarSaathi.png";
 const Projects = () => {
   const projects = [
     {
@@ -9,18 +11,18 @@ const Projects = () => {
       description:
         "Built a responsive event landing page with 3D visual effects using Three.js. Implemented animated terminal component for user onboarding and fluid UX with locomotive.js.",
       tech: ["Next.js", "React", "TypeScript", "Three.js"],
-      image: "public/projects/BruteForce.png",
-      gradient: "gradient-primary",
+      image: bruteForceImg,
+      gradient: "",
       link: "https://bruteforcecsbs.dev",
       github: "github.com/thesaiprasadrao/BruteForce",
     },
     {
       title: "Safar Saathi - Fleet Tracking Platform",
       description:
-        "Complete backend system with live tracking sending location updates every 3 seconds. Supports Admin, User, and Driver roles with Fastify and TypeScript.",
+        "Backend system with live tracking sending location updates every 3 seconds. Supports Admin, User, and Driver roles with Fastify and TypeScript.Ensured scalability and performance using Node.js and Supabase.",
       tech: ["Node.js", "Supabase", "Fastify", "TypeScript"],
-      image: "public/projects/SafarSaathi.png",
-      gradient: "gradient-accent",
+      image: safarSaathiImg,
+      gradient: "",
       link: "about:blank",
       github: "https://github.com/thesaiprasadrao/safar-saathi",
     },
@@ -29,8 +31,8 @@ const Projects = () => {
       description:
         "Full-stack scam detection app with OCR support using Pytesseract. Features NextAuth authentication, protected routes, and RESTful API for text and image analysis.",
       tech: ["Next.js", "TypeScript", "FastAPI", "Python"],
-      image: "public/projects/ScamShield.png",
-      gradient: "gradient-primary",
+      image: scamShieldImg,
+      gradient: "",
       link: "#",
       github: "https://github.com/thesaiprasadrao/scam-sheild-analyzer",
     },
@@ -52,9 +54,9 @@ const Projects = () => {
           {projects.map((project, index) => (
             <Card
               key={index}
-              className="overflow-hidden hover:shadow-xl transition-all hover:-translate-y-2 group"
+              className="overflow-hidden hover:shadow-xl transition-all hover:-translate-y-2 group flex flex-col h-full"
             >
-              <div className={`h-48 relative overflow-hidden ${!project.image ? `bg-${project.gradient}` : ''}`}>
+              <div className={`h-48 relative overflow-hidden shrink-0 ${!project.image ? `bg-${project.gradient}` : ''}`}>
                 {project.image ? (
                   <img 
                     src={project.image} 
@@ -73,7 +75,7 @@ const Projects = () => {
                 )}
               </div>
 
-              <div className="p-6 space-y-4">
+              <div className="p-6 flex flex-col flex-grow space-y-4">
                 <h3 className="text-xl font-bold text-foreground leading-tight">{project.title}</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">{project.description}</p>
 
@@ -88,7 +90,7 @@ const Projects = () => {
                   ))}
                 </div>
 
-                <div className="flex gap-3 pt-2">
+                <div className="flex gap-3 pt-2 mt-auto">
                   <Button 
                     variant="outline" 
                     size="sm" 

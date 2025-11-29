@@ -2,11 +2,13 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
+import { Link, useLocation } from "react-router-dom";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { theme, setTheme } = useTheme();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,10 +19,11 @@ const Navigation = () => {
   }, []);
 
   const navItems = [
-    { label: "About", href: "#about" },
-    { label: "Skills", href: "#skills" },
-    { label: "Projects", href: "#projects" },
-    { label: "Contact", href: "#contact" },
+    { label: "Home", href: "/" },
+    { label: "About", href: "/about" },
+    { label: "Skills", href: "/skills" },
+    { label: "Projects", href: "/projects" },
+    { label: "Contact", href: "/contact" },
   ];
 
   return (
@@ -33,20 +36,24 @@ const Navigation = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <a href="#" className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
+          <Link to="/" className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
             
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.label}
-                href={item.href}
-                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+                to={item.href}
+                className={`text-sm font-medium transition-colors ${
+                  location.pathname === item.href
+                    ? "text-primary"
+                    : "text-muted-foreground hover:text-primary"
+                }`}
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
             <Button
               variant="ghost"
@@ -94,14 +101,18 @@ const Navigation = () => {
           <div className="md:hidden py-4 border-t border-border bg-background/95 backdrop-blur-lg">
             <div className="flex flex-col gap-4">
               {navItems.map((item) => (
-                <a
+                <Link
                   key={item.label}
-                  href={item.href}
-                  className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors px-2"
+                  to={item.href}
+                  className={`text-sm font-medium transition-colors px-2 ${
+                    location.pathname === item.href
+                      ? "text-primary"
+                      : "text-muted-foreground hover:text-primary"
+                  }`}
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {item.label}
-                </a>
+                </Link>
               ))}
               <Button size="sm" className="bg-gradient-primary w-full">
                 Resume

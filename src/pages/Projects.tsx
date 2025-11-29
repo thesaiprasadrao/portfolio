@@ -1,17 +1,17 @@
 import Navigation from "@/components/Navigation";
-import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
+import ProjectsComponent from "@/components/Projects";
 
-const Index = () => {
+const Projects = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Navigation />
-      <main className="flex-grow">
-        <Hero />
+      <main className="flex-grow pt-1">
+        <ProjectsComponent />
       </main>
       <Footer />
     </div>
   );
 };
 
-export default Index;
+export default Projects;

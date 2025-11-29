@@ -1,17 +1,17 @@
 import Navigation from "@/components/Navigation";
-import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
+import SkillsComponent from "@/components/Skills";
 
-const Index = () => {
+const Skills = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Navigation />
-      <main className="flex-grow">
-        <Hero />
+      <main className="flex-grow pt-1">
+        <SkillsComponent />
       </main>
       <Footer />
     </div>
   );
 };
 
-export default Index;
+export default Skills;
