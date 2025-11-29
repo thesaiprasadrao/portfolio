@@ -29,7 +29,7 @@ const Hero = () => {
       </div>
 
       <div className="max-w-5xl mx-auto text-center space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-1000">
-        <div className="inline-block">
+        {/* <div className="inline-block">
           <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium border border-primary/20">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
@@ -37,7 +37,7 @@ const Hero = () => {
             </span>
             Available for opportunities
           </span>
-        </div>
+        </div> */}
 
         <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight">
           <span className="block text-foreground">Hi, I'm</span>
@@ -52,8 +52,8 @@ const Hero = () => {
         </p>
 
         <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
-          I craft elegant digital experiences through clean code and thoughtful design. 
-          Passionate about building products that make a difference.
+          Full-stack developer with an emphasis on creating tools that improve daily life.
+          I write code with a purpose, making apps that help real people with real problems.
         </p>
 
         <div className="flex flex-wrap items-center justify-center gap-4 pt-4">

@@ -1,7 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Mail, Phone, MapPin, Github, Linkedin, Twitter } from "lucide-react";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaInstagram, FaWhatsapp } from "react-icons/fa";
 
 // Modular data structure - easy to add/remove items
 const contactLinks = [
@@ -33,14 +33,20 @@ const contactLinks = [
   {
     icon: Twitter,
     title: "Twitter",
-    href: "https://twitter.com",
+    href: "https://x.com/thesaiprasadrao",
     color: "text-sky-500 hover:text-sky-600"
+  },
+  {
+    icon: FaInstagram,
+    title: "Instagram",
+    href: "https://instagram.com/thesaiprasadrao",
+    color: "text-pink-500 hover:text-pink-600"
   },
 ];
 
 // Modular styling configuration
 const STYLE_CONFIG = {
-  iconSize: "w-2 h-2 md:w-10 md:h-10",
+  iconSize: "w-1 h-1 md:w-10 md:h-10",
   containerPadding: "p-4",
   gap: "gap-6 md:gap-12"
 };
@@ -56,7 +62,7 @@ const Contact = () => {
               Get in Touch
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Connect with me on your preferred platform
+              Let me know if you need me for building some cool stuff
             </p>
           </div>
 
