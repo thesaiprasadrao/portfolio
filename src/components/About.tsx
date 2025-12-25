@@ -1,4 +1,3 @@
-
 const About = () => {
   return (
     <section id="about" className="py-24 px-4 sm:px-6 lg:px-8">

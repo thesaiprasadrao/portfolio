@@ -19,12 +19,24 @@ const Navigation = () => {
   }, []);
 
   const navItems = [
-    { label: "Home", href: "/" },
-    { label: "About", href: "/about" },
-    { label: "Skills", href: "/skills" },
-    { label: "Projects", href: "/projects" },
-    { label: "Contact", href: "/contact" },
+    { label: "Home", href: "/", mobileScroll: "hero" },
+    { label: "About", href: "/about", mobileScroll: "about" },
+    { label: "Skills", href: "/skills", mobileScroll: "skills" },
+    { label: "Projects", href: "/projects", mobileScroll: "projects" },
+    { label: "Contact", href: "/contact", mobileScroll: "contact" },
   ];
+
+  const handleMobileNavClick = (item: typeof navItems[0]) => {
+    setIsMobileMenuOpen(false);
+    
+    // On mobile, scroll to section if on home page
+    if (window.innerWidth < 768 && location.pathname === "/") {
+      const element = document.getElementById(item.mobileScroll);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
 
   return (
     <nav
@@ -101,22 +113,23 @@ const Navigation = () => {
           <div className="md:hidden py-4 border-t border-border bg-background/95 backdrop-blur-lg">
             <div className="flex flex-col gap-4">
               {navItems.map((item) => (
-                <Link
+                <button
                   key={item.label}
-                  to={item.href}
-                  className={`text-sm font-medium transition-colors px-2 ${
+                  onClick={() => handleMobileNavClick(item)}
+                  className={`text-sm font-medium transition-colors px-2 text-left ${
                     location.pathname === item.href
                       ? "text-primary"
                       : "text-muted-foreground hover:text-primary"
                   }`}
-                  onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {item.label}
-                </Link>
+                </button>
               ))}
+              <a href="https://drive.google.com/file/d/1v8PFgKUHtAGn0lV3b909zvH59qMU58bN/view?usp=sharing" target="_blank">
               <Button size="sm" className="bg-gradient-primary w-full">
                 Resume
               </Button>
+              </a>
             </div>
           </div>
         )}
